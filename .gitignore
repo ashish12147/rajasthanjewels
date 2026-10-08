@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+.env*
+!.env.example
+node_modules/
+coverage/
+playwright-report/
+test-results/

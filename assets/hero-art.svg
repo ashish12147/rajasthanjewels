@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" preserveAspectRatio="xMidYMid slice">
+<defs>
+<radialGradient id="bg"><stop stop-color="#e2c59e"/><stop offset=".52" stop-color="#b7906d"/><stop offset="1" stop-color="#5c513e"/></radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6e4c29"/><stop offset=".22" stop-color="#f9e7ba"/><stop offset=".48" stop-color="#b77b34"/><stop offset=".7" stop-color="#fce7a7"/><stop offset="1" stop-color="#885e2e"/></linearGradient>
+<radialGradient id="gem" fx=".26" fy=".2"><stop stop-color="#dff4c9"/><stop offset=".2" stop-color="#7bbaa0"/><stop offset=".7" stop-color="#276450"/><stop offset="1" stop-color="#102e27"/></radialGradient>
+<radialGradient id="ruby" fx=".3" fy=".26"><stop stop-color="#ffac88"/><stop offset=".45" stop-color="#a14043"/><stop offset="1" stop-color="#471e2e"/></radialGradient>
+<filter id="shade"><feGaussianBlur stdDeviation="23"/></filter><filter id="glow"><feGaussianBlur stdDeviation="2"/></filter>
+<path id="orn" d="M0 -18 Q18 0 0 20 Q-18 0 0 -18Z"/>
+<g id="drop"><path d="M0 -45 C18 -9 31 15 0 45 C-31 15 -18 -9 0 -45Z" fill="url(#gem)" stroke="url(#gold)" stroke-width="7"/><path d="M0 -32 12 5 0 29 -12 5Z" stroke="#a4e4c9" fill="none" opacity=".8" stroke-width="2"/></g>
+</defs>
+<rect width="1000" height="1200" fill="url(#bg)"/>
+<path d="M0 0h1000v1200H0z" fill="#714a36" opacity=".05"/>
+<g opacity=".22" stroke="#fff0cc" fill="none" stroke-width="1.3"><rect x="61" y="59" width="878" height="1082" rx="440"/><rect x="81" y="79" width="838" height="1042" rx="420"/><circle cx="500" cy="550" r="340"/><circle cx="500" cy="550" r="300"/></g>
+<ellipse cx="508" cy="738" rx="270" ry="130" fill="#271a10" opacity=".32" filter="url(#shade)"/>
+<!-- necklace chain in 3 concentric arcs -->
+<path d="M220 255 C200 525 337 702 500 725 C663 702 800 525 780 255" stroke="#5a361e" stroke-width="58" fill="none" opacity=".5" filter="url(#shade)"/>
+<path d="M220 255 C200 525 337 702 500 725 C663 702 800 525 780 255" stroke="url(#gold)" stroke-width="43" fill="none"/>
+<path d="M222 256 C206 510 341 677 500 701 C659 677 794 510 778 256" stroke="#ffefba" stroke-width="3" fill="none" opacity=".7"/>
+<path d="M248 268 C248 501 353 638 500 661 C647 638 752 501 752 268" stroke="url(#gold)" stroke-width="26" fill="none"/>
+<path d="M274 295 C281 466 366 595 500 610 C634 595 719 466 726 295" stroke="#e5be75" stroke-width="7" fill="none"/>
+<!-- antique decorative beads -->
+<g stroke="#704822" stroke-width="3" fill="url(#gold)">
+<circle cx="222" cy="300" r="19"/><circle cx="236" cy="384" r="19"/><circle cx="267" cy="467" r="19"/><circle cx="318" cy="543" r="20"/><circle cx="389" cy="608" r="19"/><circle cx="500" cy="661" r="20"/><circle cx="611" cy="608" r="19"/><circle cx="682" cy="543" r="20"/><circle cx="733" cy="467" r="19"/><circle cx="764" cy="384" r="19"/><circle cx="778" cy="300" r="19"/>
+</g>
+<!-- emerald gemstones around collars -->
+<g fill="url(#gem)" stroke="#f4dd9f" stroke-width="5"><ellipse cx="268" cy="468" rx="13" ry="18" transform="rotate(-25 268 468)"/><ellipse cx="320" cy="542" rx="13" ry="18" transform="rotate(-35 320 542)"/><ellipse cx="391" cy="608" rx="13" ry="18" transform="rotate(-48 391 608)"/><ellipse cx="500" cy="663" rx="14" ry="18"/><ellipse cx="609" cy="608" rx="13" ry="18" transform="rotate(48 609 608)"/><ellipse cx="680" cy="542" rx="13" ry="18" transform="rotate(35 680 542)"/><ellipse cx="732" cy="468" rx="13" ry="18" transform="rotate(25 732 468)"/></g>
+<!-- main central necklace element -->
+<path d="M389 701 Q500 798 611 701 L570 860 Q500 912 430 860Z" fill="url(#gold)" stroke="#9f723c" stroke-width="6"/>
+<path d="M415 728 Q500 800 585 728 L559 848 Q500 873 441 848Z" fill="url(#gem)" stroke="#f2e0ac" stroke-width="8"/>
+<path d="M500 737 552 812 500 854 448 812Z" fill="#4f947e" opacity=".55" stroke="#bff5d4" stroke-width="2"/>
+<path d="M435 871Q500 938 565 871" stroke="url(#gold)" stroke-width="18" fill="none"/>
+<g><use href="#drop" transform="translate(500 965) scale(.72)"/><use href="#drop" transform="translate(427 900) scale(.42) rotate(-20)"/><use href="#drop" transform="translate(573 900) scale(.42) rotate(20)"/></g>
+<!-- suspended pearl drops -->
+<g fill="#faefd6" stroke="#c7a367" stroke-width="4"><ellipse cx="312" cy="600" rx="10" ry="17"/><ellipse cx="362" cy="660" rx="10" ry="17"/><ellipse cx="635" cy="660" rx="10" ry="17"/><ellipse cx="688" cy="600" rx="10" ry="17"/><ellipse cx="435" cy="722" rx="12" ry="20"/><ellipse cx="567" cy="722" rx="12" ry="20"/></g>
+<path d="M160 140 H840" stroke="#f4e8c8" stroke-opacity=".25"/>
+<text x="500" y="1090" text-anchor="middle" fill="#fff0d5" font-family="Georgia,serif" font-size="24" letter-spacing="9" opacity=".84">RAJASTHAN JEWELS</text>
+</svg>
