@@ -34,7 +34,26 @@ Tests validate quiz ranking logic, HTML escaping, website pages and SEO metadata
 
 ## Deployment
 
-### GitHub Pages
+### Vercel (preferred for this project)
+
+1. Connect this GitHub repository to your Vercel account using [New Project](https://vercel.com/new).
+2. Import `ashish12147/rajasthanjewels` from GitHub, select **Other** as the framework preset, **Root Directory** `./`, and **Production Branch** `main`.
+3. This project uses plain HTML, CSS and JavaScript at repository root: **no build command, install command, environment variables, or output folder are needed**. Vercel's Other preset serves the root when there is no `public` directory.
+4. Deploy and confirm the assigned `*.vercel.app` URL loads, navigation works, and mobile assets appear.
+5. Add `rajasthanjewels.com` and `www.rajasthanjewels.com` in **Project → Settings → Domains**. Obtain project-specific A/CNAME/TXT instructions directly from Vercel; add those records at the authoritative DNS provider. Do not change nameservers just to point the website at Vercel and do not remove MX/SPF/DKIM/DMARC records.
+6. Verify HTTPS and choose a canonical domain with a redirect for the other hostname. Pushing to `main` will then trigger future deployments automatically.
+
+**Hosting policy:** Vercel Hobby is restricted to personal or non-commercial usage. Use an appropriate plan for commercial business operation. See [Vercel terms](https://vercel.com/legal/terms).
+
+### Hostinger Email (configure after the website deployment)
+
+1. In Hostinger hPanel, open **Emails** and activate a qualifying email plan for `rajasthanjewels.com` if one is not already attached; any bundled mailbox offer depends on the hosting/email subscription.
+2. Create `hello@rajasthanjewels.com` (the address displayed on the site); optionally create `founder@rajasthanjewels.com` as another mailbox or alias.
+3. At the domain's **authoritative DNS provider**, add the exact **MX, SPF, DKIM and DMARC** records shown by Hostinger. Do not replace website A/CNAME records. Do not publish two separate SPF records.
+4. Verify by sending from a different mailbox **to** `hello@rajasthanjewels.com`, then **replying from** the new mailbox. Only then remove the email setup notice in the contact page.
+5. Open [Hostinger Webmail](https://mail.hostinger.com/) to use the inbox.
+
+### GitHub Pages (alternative)
 
 1. Create a **public** GitHub repository `rajasthanjewels` under `ashish12147`.
 2. Upload the **contents of this folder** to the root of the default (`main`) branch (not the parent folder).
