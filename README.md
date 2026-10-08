@@ -34,24 +34,32 @@ Tests validate quiz ranking logic, HTML escaping, website pages and SEO metadata
 
 ## Deployment
 
-### Vercel (preferred for this project)
+### Netlify (recommended)
 
-1. Connect this GitHub repository to your Vercel account using [New Project](https://vercel.com/new).
-2. Import `ashish12147/rajasthanjewels` from GitHub, select **Other** as the framework preset, **Root Directory** `./`, and **Production Branch** `main`.
-3. This project uses plain HTML, CSS and JavaScript at repository root: **no build command, install command, environment variables, or output folder are needed**. Vercel's Other preset serves the root when there is no `public` directory.
-4. Deploy and confirm the assigned `*.vercel.app` URL loads, navigation works, and mobile assets appear.
-5. Add `rajasthanjewels.com` and `www.rajasthanjewels.com` in **Project → Settings → Domains**. Obtain project-specific A/CNAME/TXT instructions directly from Vercel; add those records at the authoritative DNS provider. Do not change nameservers just to point the website at Vercel and do not remove MX/SPF/DKIM/DMARC records.
-6. Verify HTTPS and choose a canonical domain with a redirect for the other hostname. Pushing to `main` will then trigger future deployments automatically.
+1. Sign in to [Netlify](https://app.netlify.com/) and select **Add new project → Import an existing project → GitHub**.
+2. Authorize the GitHub repository `ashish12147/rajasthanjewels` and choose branch `main`.
+3. The included `netlify.toml` sets publish directory to `.` (repository root). **No build command, install command, or environment variables** are required. Click **Deploy**.
+4. Verify that the resulting `*.netlify.app` preview URL works, including styles, navigation, and imagery, before connecting the domain.
+5. Add `rajasthanjewels.com` under **Domain management → Add a domain** on the Netlify site. Netlify may also add `www.rajasthanjewels.com`; configure both per the dashboard.
+6. Because the domain was bought through Hostinger and Hostinger Email is planned, the easiest long-term arrangement is **Hostinger nameservers + Hostinger DNS**, using Netlify for web hosting only. At the Hostinger registrar choose **Use Hostinger nameservers**, wait for DNS authority to switch, then add the records below in Hostinger DNS. This replaces any previous Vercel nameserver setup. Before switching, inventory any existing email/TXT records so they can be preserved.
+7. In Hostinger DNS, configure the apex `@` using the exact records Netlify shows for the project. On Netlify's standard network, the common fallback is an **A record** `@ → 75.2.60.5`. Point `www` via **CNAME** to the exact assigned `your-site.netlify.app` hostname (not an example). Follow Netlify's project-specific records if different. Remove only conflicting old website records.
+8. Wait for DNS and HTTPS verification, then set the preferred primary domain/redirect in Netlify. Future GitHub pushes to `main` will automatically deploy.
 
-**Hosting policy:** Vercel Hobby is restricted to personal or non-commercial usage. Use an appropriate plan for commercial business operation. See [Vercel terms](https://vercel.com/legal/terms).
+**Important:** Switching nameservers changes which provider controls every DNS record, including MX/SPF/DKIM/DMARC. Never treat an existing Vercel or Cloudflare zone as editable after delegation moves elsewhere. Check and preserve mail records during a change.
 
-### Hostinger Email (configure after the website deployment)
+See the [Netlify external DNS instructions](https://docs.netlify.com/manage/domains/configure-domains/configure-external-dns/) and [Hostinger nameservers instructions](https://www.hostinger.com/support/1696789-how-to-change-nameservers-at-hostinger/).
 
-1. In Hostinger hPanel, open **Emails** and activate a qualifying email plan for `rajasthanjewels.com` if one is not already attached; any bundled mailbox offer depends on the hosting/email subscription.
-2. Create `hello@rajasthanjewels.com` (the address displayed on the site); optionally create `founder@rajasthanjewels.com` as another mailbox or alias.
-3. At the domain's **authoritative DNS provider**, add the exact **MX, SPF, DKIM and DMARC** records shown by Hostinger. Do not replace website A/CNAME records. Do not publish two separate SPF records.
-4. Verify by sending from a different mailbox **to** `hello@rajasthanjewels.com`, then **replying from** the new mailbox. Only then remove the email setup notice in the contact page.
-5. Open [Hostinger Webmail](https://mail.hostinger.com/) to use the inbox.
+### Hostinger Email (after website deployment)
+
+1. In Hostinger hPanel, activate an email plan for `rajasthanjewels.com` if one is not already attached.
+2. Create `hello@rajasthanjewels.com` (shown on the site) and optionally `founder@rajasthanjewels.com` as an additional mailbox or alias.
+3. Confirm the authoritative Hostinger DNS zone contains the exact MX, SPF, DKIM and DMARC records required by the Hostinger email plan. There should be only one SPF TXT record at a given name.
+4. Send a test email **to** the mailbox from another address and a reply **from** the new mailbox. Remove any website email setup notice only after delivery succeeds.
+5. Access mail at [Hostinger Webmail](https://mail.hostinger.com/).
+
+### Vercel (unused alternative)
+
+This static project can also run on Vercel, but Rajasthan Jewels is configured to deploy on Netlify. Do not point its production DNS at both hosts.
 
 ### GitHub Pages (alternative)
 
