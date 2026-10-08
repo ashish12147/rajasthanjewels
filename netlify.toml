@@ -1,0 +1,6 @@
+# Rajasthan Jewels — static Netlify deployment
+# The source HTML/CSS/JS and assets are served directly from the repository root.
+[build]
+  publish = "."
+
+# No build command or environment variables required.
